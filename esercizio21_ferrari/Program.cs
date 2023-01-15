@@ -87,6 +87,8 @@ namespace esercizio21_ferrari
                     case "u":                                                       //istruzioni da eseguire se l'input ricevuto è "u"
                         r = true;                                                               //assegnazione a r il valore true
                         break;                                                                  //termina lo switch
+                    default: Console.WriteLine("Opzione non valida");             //istruzioni da eseguire se l'input non è tra le opzioni precedenti
+                        break;                                                                  //termina lo switch
                 }
                 Console.WriteLine("Premere un tasto per continuare");       //output del messaggio "Premere un tasto per continuare"
                 Console.ReadKey();                                          //input di un carattere per continuare
@@ -110,7 +112,7 @@ namespace esercizio21_ferrari
         static string Html(int[] array, ref int indice)                                 //funzione che genera il codice html necessario a mostrare l'array
         {
             string s;                                                               //dichiarazione della variabile locale s, di tipo string
-            s = "<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>Visualizzazione dell'array</title>\r\n    </head>\r\n    <body>\r\n        <table>\r\n            <tr>";      //assegnazione della stringa precedente ad s
+            s = "<!DOCTYPE html>\r\n<html lang=\"it\">\r\n    <head>\r\n        <title>Visualizzazione dell'array</title>\r\n    </head>\r\n    <body>\r\n        <table>\r\n            <tr>";      //assegnazione della stringa precedente ad s
             for (int i = 0; i < indice; i++)                                        //ciclo che concatena ad s i valori nell'array, ponenodli in <td></td>
              {
                s += $"<td>{array[i]}</td>";                                         //concatena ad s "<td>{array[i]}</td>" dove al posto di {array[i]} si trova il valore di array[i]
